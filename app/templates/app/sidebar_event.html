@@ -1,0 +1,62 @@
+{% load static %}
+<nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light " style="background-color: #e4e9ee;" id="sidenav-main">
+    <div class="scrollbar-inner">
+      <!-- Brand -->
+      <div class="sidenav-header d-flex align-items-center">
+        <a class="navbar-brand" href="{% url 'index' %}">
+          <img src="{% static 'img/news/circle_3.png' %}" class="navbar-brand-img">
+        </a>
+        <h3 >Event Handle</h3>
+        <div class="ml-auto">
+          <!-- Sidenav toggler -->
+        </div>
+      </div>
+      <div class="navbar-inner">
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+          <!-- Nav items -->
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <i class="ni ni-shop text-primary"></i>
+                <span class="nav-link-text ">Geral</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="#">
+                <i class="ni ni-single-02 text-primary"></i>
+                <span class="nav-link-text">Pagantes</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="#">
+                <i class="ni ni-money-coins text-primary"></i>
+                <span class="nav-link-text">Despesas</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="#">
+                <i class="ni ni-single-copy-04 text-primary"></i>
+                <span class="nav-link-text">Atividades</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="#">
+                <i class="fa fa-phone text-primary"></i>
+                <span class="nav-link-text">Contato</span>
+              </a>
+            </li>
+
+          </ul>
+          <!-- Divider -->
+          <hr class="my-3">
+          <!-- Navigation -->
+        </div>
+      </div>
+    </div>
+  </nav>

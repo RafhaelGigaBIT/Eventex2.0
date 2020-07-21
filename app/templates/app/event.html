@@ -1,0 +1,97 @@
+{% extends 'app/main_event.html' %}
+<!-- Main content -->
+
+{% load static %}
+
+{% block content %}  
+
+<div class="header pb-6" style="background-color: #483D8B;">
+    <div class="container-fluid">
+      <div class="header-body">
+        <div class="row align-items-center py-4">
+          <div class="col-lg-6 col-7">
+            <h6 class="h2 text-white d-inline-block mb-0">{{event.organizer}}</h6>
+          </div>
+        </div>
+        <!-- Card stats -->
+        <div class="row">
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Número de convidados</h5>
+                    <span class="h2 font-weight-bold mb-0">{{event.invitations}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">DATA</h5>
+                    <span class="h2 font-weight-bold mb-0">{{event.date}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">CUSTO TOTAL</h5>
+                    <span class="h2 font-weight-bold mb-0">{{event.money}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">tOTAL JÁ PAGO</h5>
+                    <span class="h2 font-weight-bold mb-0">{{event.parcial}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid mt--6">
+    <div class="card">
+        <div class="card-body">
+            <div class="row row-example">
+                <div class="col" >
+                    <img class="card-img-top" src="{% static 'img/theme/marry.jpg' %}" alt="">
+                </div>
+                <div class="col">
+                    <h3 class="card-title mb-3">Descrição</h3>
+                    <p class="card-text mb-4">{{event.description}}</p>
+                    <a href="#" class="btn btn-primary">Editar</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

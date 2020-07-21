@@ -1,0 +1,27 @@
+{% for tag in tags %}
+            <div class="container">
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-6 col-7">
+                        <h6 class="h1 text-white d-inline-block mb-0">{{tag.name}} &nbsp </h6>
+                        <a class="" href="#">
+                            <i class="fa fa-plus fa-lg" style="color: black;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="header-body">
+                    <div class="row card-wrapper">                  
+                        
+                        {% for event in events %}                          
+                                                   
+                        {% endfor %}
+                          
+                    </div>
+                </div>
+            </div>          
+        {% endfor %}
+
+
+
+
+        
