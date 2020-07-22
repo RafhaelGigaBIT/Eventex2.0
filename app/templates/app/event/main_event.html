@@ -16,15 +16,16 @@
 
 </head>
 <body>
-    {% include 'app/sidebar_event.html' %}
-    
+    {% block side %}
+
+    {% endblock %}
     <div class="main-content" id="panel">
-        {% include 'app/navbar_event.html' %}
+        {% include 'app/event/navbar_event.html' %}
         {% block content %}
             
         {% endblock %}  
     </div>
-    {% include 'app/footer.html' %}
+    {% include 'app/event/footer.html' %}
 
 
     <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
@@ -32,9 +33,6 @@
     <script src="{% static 'vendor/js-cookie/js.cookie.js' %}"></script>
     <script src="{% static 'vendor/jquery.scrollbar/jquery.scrollbar.min.js' %}"></script>
     <script src="{% static 'vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js' %}"></script>
-    <!-- Optional JS -->
-    <script src="{% static 'vendor/chart.js/dist/Chart.min.js' %}"></script>
-    <script src="{% static 'vendor/chart.js/dist/Chart.extension.js' %}"></script>
     <!-- Argon JS -->
     <script src="{% static 'js/argon.js' %}"></script>
     <!-- Demo JS - remove this in your project -->

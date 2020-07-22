@@ -4,5 +4,5 @@ from .models import *
 # Register your models here.
 
 admin.site.register(Event)
-admin.site.register(Guest)
+admin.site.register(Payers)
 admin.site.register(Tag)

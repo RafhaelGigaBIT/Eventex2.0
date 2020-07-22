@@ -18,10 +18,18 @@ def index(request):
     return render(request, 'app/index.html', context)
 
 def event(request, pk):
-    event = Event.objects.get(id=pk)
+    event = Event.objects.get(id=pk)      
     user = request.user
     context = {'user':user, 'event':event}
     if event.user == request.user:
         return render(request, 'app/event.html', context)
+    else:
+        return redirect('/')
+
+def actEvent(request, pk):
+    event = Event.objects.get(id=pk) 
+    if event.user == request.user:
+        context = {'event':event}
+        return render(request, 'app/activities.html', context)
     else:
         return redirect('/')
