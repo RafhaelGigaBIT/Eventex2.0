@@ -12,7 +12,7 @@ class Tag(models.Model):
 
 class Event(models.Model):
     user = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100, null=True)
+    title = models.CharField(max_length=100, null=True)
     organizer = models.CharField(max_length=100, null=True)
     money = MoneyField(max_digits=10, decimal_places=2, null=True, default_currency='BRL')
     parcial = MoneyField(max_digits=10, decimal_places=2, null=True, default_currency='BRL')
