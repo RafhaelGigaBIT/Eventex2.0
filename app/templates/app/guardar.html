@@ -24,6 +24,56 @@
 
 
 
+        [
+        {% for ev in events %}
+          {
+            title: '{{ev.title}}',
+            start: '{{ev.date|date:'Y-m-d' }}'
+          },
+        {% endfor %}
+      ]
+
+
+
+
+
+
+
+
+
+
+
+
+      <form id= 'form-event' class="new-event--form" >
+
+            <div class="form-group">
+              <label class="form-control-label">Nome do evento</label>
+              <input type="text" id= 'event-title' class="form-control form-control-alternative new-event--title" placeholder="Event Title" aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label class="form-control-label">Lugar do evento</label>
+              <input type="text" autocomplete="off" class="form-control form-control-alternative new-event--place" placeholder="Event Place" aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label class="form-control-label">Quantidade de convites</label>
+              <input type="number"  autocomplete="off" class="form-control form-control-alternative new-event--invite" style="width: 50%;" placeholder="Event Invites">
+            </div>
+
+            <div class="form-group">
+              <label class="form-control-label">Description</label>
+              <textarea class="form-control form-control-alternative new-event--description textarea-autosize" placeholder="Event Desctiption" aria-required="true"></textarea>
+              <i class="form-group--bar"></i>
+            </div>
+
+            <input type="hidden" class="new-event--start" />
+            <input type="hidden" class="new-event--end" />
+          </form>
+
+
+
+
 
 
 

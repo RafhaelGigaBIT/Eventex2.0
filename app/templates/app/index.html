@@ -124,7 +124,7 @@
             <div class="row align-items-center py-4">
                 <div class="col-lg-6 col-7">
                     <h6 class="h1 text-white d-inline-block mb-0">{{tag.name}} &nbsp </h6>
-                    <a class="" href="#">
+                    <a class="" href="add-event/{{tag.id}}">
                         <i class="fa fa-plus fa-lg" style="color: black;"></i>
                     </a>
                 </div>
@@ -139,7 +139,7 @@
                             <div class="card">
                               <img class="card-img-top" src="{% static 'img/theme/img-1-1000x600.jpg' %}" alt="Image placeholder">
                               <div class="card-body">
-                              <h3 class="h2 display-5 " style="justify-content: center; align-items: center; text-align: center;">{{event.name}}</h3>
+                              <h3 class="h2 display-5 " style="justify-content: center; align-items: center; text-align: center;">{{event.title}}</h3>
                               </div>
                             </div>
                           </a>    
